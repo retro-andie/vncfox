@@ -1,8 +1,5 @@
-docker-local:
-	docker buildx build --platform linux/arm64 -t tenox7/vncfox:latest --load .
-
-docker-push:
-	docker buildx build --platform linux/amd64,linux/arm64 -t tenox7/vncfox:latest --push .
+vncfox:
+	podman build -t vncfox:latest .
 
 clean:
-	docker rmi -f tenox7/vncfox:latest
+	podman rmi -f vncfox:latest

@@ -22,9 +22,9 @@ RUN chown vncfox /etc/tigervnc/vncserver-config-defaults
 ADD vncserver.users /etc/tigervnc/vncserver.users
 ADD xsession.desktop /usr/share/xsessions
 RUN mkdir /home/vncfox/.mozilla
-RUN mkdir -p /home/vncfox/.config/tigervnc
-RUN sh -c 'echo vncfox | vncpasswd -f > /home/vncfox/.config/tigervnc/passwd'
-RUN chmod 600 /home/vncfox/.config/tigervnc/passwd
+#RUN mkdir -p /home/vncfox/.config/tigervnc
+#RUN sh -c 'echo vncfox | vncpasswd -f > /home/vncfox/.config/tigervnc/passwd'
+#RUN chmod 600 /home/vncfox/.config/tigervnc/passwd
 RUN chown -R vncfox /home/vncfox
 ADD init /init
 USER vncfox
