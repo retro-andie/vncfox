@@ -1,5 +1,5 @@
 ratpoison &
 while true
 do 
-  firefox-esr
+  firefox
 done
